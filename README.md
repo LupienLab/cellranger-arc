@@ -29,13 +29,11 @@ cellranger-arc mkfastq --id=tiny-bcl-atac \
 
 Construct a 3-column libraries CSV file that specifies the location of the ATAC and GEX FASTQ files associated with the sample.
 For our example, the file would look as follows:
-
+```
 fastqs,sample,library_type
-
 /home/jdoe/runs/HNGEXSQXXX/outs/fastq_path,example,Gene Expression
-
 /home/jdoe/runs/HNATACSQXX/outs/fastq_path,example,Chromatin Accessibility
-
+```
 
 **STEP6: Run count with following command:**
 
