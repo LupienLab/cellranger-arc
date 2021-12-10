@@ -31,7 +31,9 @@ Construct a 3-column libraries CSV file that specifies the location of the ATAC 
 For our example, the file would look as follows:
 
 fastqs,sample,library_type
+
 /home/jdoe/runs/HNGEXSQXXX/outs/fastq_path,example,Gene Expression
+
 /home/jdoe/runs/HNATACSQXX/outs/fastq_path,example,Chromatin Accessibility
 
 
