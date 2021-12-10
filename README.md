@@ -18,14 +18,24 @@ wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020
 wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz
 
 
-**STEP4: Run mkfastq with following command:**
+**STEP4: Run mkfastq with following command if required:**
 
 cellranger-arc mkfastq --id=tiny-bcl-atac \
                      --run=/path/to/cellranger-arc-tiny-bcl-atac-1.0.0 \
                      --csv=/path/to/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
 
 
-**STEP5: Run count with following command:**
+**STEP5: Create a libraries CSV file:**
+
+Construct a 3-column libraries CSV file that specifies the location of the ATAC and GEX FASTQ files associated with the sample.
+For our example, the file would look as follows:
+
+fastqs,sample,library_type
+/home/jdoe/runs/HNGEXSQXXX/outs/fastq_path,example,Gene Expression
+/home/jdoe/runs/HNATACSQXX/outs/fastq_path,example,Chromatin Accessibility
+
+
+**STEP6: Run count with following command:**
 
 cellranger-arc count --id=sample345 \
                        --reference=/opt/refdata-cellranger-arc-GRCh38-2020-A-2.0.0 \
