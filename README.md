@@ -12,6 +12,7 @@ module load cellranger-arc/2.0.0
 STEP3: Download genome references
 
 wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
+
 wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz
 
 
