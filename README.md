@@ -1,5 +1,5 @@
 # cellranger-arc
-# https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/what-is-cell-ranger-arc
+Reference: https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/what-is-cell-ranger-arc
 
 **STEP 1: Login to cluster:**
 ssh username@cluster.org
