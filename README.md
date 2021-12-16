@@ -6,12 +6,8 @@ Reference: https://support.10xgenomics.com/single-cell-multiome-atac-gex/softwar
 ssh username@cluster.org
 ```
 
-**STEP 2: Load cellranger-arc module with following command:**
-```
-module load cellranger-arc/2.0.0
-```
 
-**STEP3: Download genome references and example data**
+**STEP2: Download genome references and example data**
 ```
 wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
 wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz
@@ -27,6 +23,11 @@ wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-gex-simple
 
 tar -xvf cellranger-arc-tiny-bcl-gex-1.0.0.tar.gz
 
+```
+
+**STEP 3: Load cellranger-arc module with following command:**
+```
+module load cellranger-arc/2.0.0
 ```
 
 **STEP4: Run mkfastq with following command if required, refer [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/mkfastq) to create csv file:**
