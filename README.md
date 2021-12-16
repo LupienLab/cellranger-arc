@@ -29,7 +29,7 @@ cellranger-arc mkfastq --id=tiny-bcl-atac \
                      --csv=/path/to/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
 ```
 
-**STEP5: Create a libraries CSV file as shown ([here])(https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/count):**
+**STEP5: Create a libraries CSV file as shown [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/count):**
 
 Construct a 3-column libraries CSV file that specifies the location of the ATAC and GEX FASTQ files associated with the sample.
 For our example, the file would look as follows:
