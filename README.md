@@ -20,6 +20,13 @@ wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-atac-1.0.0
 wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
 
 tar -xvf cellranger-arc-tiny-bcl-atac-1.0.0.tar.gz
+
+wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-gex-1.0.0.tar.gz
+wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-gex-simple-1.0.0.csv
+
+
+tar -xvf cellranger-arc-tiny-bcl-gex-1.0.0.tar.gz
+
 ```
 
 **STEP4: Run mkfastq with following command if required, refer [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/mkfastq) to create csv file:**
@@ -27,6 +34,7 @@ tar -xvf cellranger-arc-tiny-bcl-atac-1.0.0.tar.gz
 cellranger-arc mkfastq --id=tiny-bcl-atac \
                      --run=/path/to/cellranger-arc-tiny-bcl-atac-1.0.0 \
                      --csv=/path/to/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
+                     
 ```
 
 **STEP5: Create a libraries CSV file as shown [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/count):**
