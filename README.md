@@ -44,6 +44,7 @@ cellranger-arc mkfastq --id=tiny-bcl-atac \
                      --csv=/path/to/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
 e.g.
 cellranger-arc mkfastq --id=tiny-bcl-atac --run=cellranger-arc-tiny-bcl-atac-1.0.0/ --csv=cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv --output-dir=results/
+cellranger-arc mkfastq --id=tiny-bcl-gex --run=cellranger-arc-tiny-bcl-gex-1.0.0/ --csv=cellranger-arc-tiny-bcl-gex-simple-1.0.0.csv --output-dir=results/
 ```
 
 **STEP5: Create a libraries CSV file as shown [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/count):**
