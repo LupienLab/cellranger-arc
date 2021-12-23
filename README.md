@@ -55,6 +55,11 @@ For our example, the file would look as follows:
 fastqs,sample,library_type
 /home/jdoe/runs/HNGEXSQXXX/outs/fastq_path,example,Gene Expression
 /home/jdoe/runs/HNATACSQXX/outs/fastq_path,example,Chromatin Accessibility
+
+e.g.
+fastqs,sample,library_type
+/cluster/projects/lupiengroup/People/ankita/cellranger-arc-example/tiny-bcl-gex/outs/fastq_path/J5KBG,test_sample_atac,Gene Expression
+/cluster/projects/lupiengroup/People/ankita/cellranger-arc-example/tiny-bcl-atac/outs/fastq_path/J5KBG,test_sample_atac,Chromatin Accessibility
 ```
 
 **STEP6: Run count with following command:**
@@ -64,4 +69,6 @@ cellranger-arc count --id=sample345 \
                        --libraries=/home/jdoe/runs/libraries.csv \
                        --localcores=16 \
                        --localmem=64
+e.g.
+cellranger-arc count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --libraries=libraries.csv --localcores=16   --localmem=64
 ```
