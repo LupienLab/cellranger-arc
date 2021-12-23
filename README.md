@@ -12,6 +12,9 @@ ssh username@cluster.org
 wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
 wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz
 
+tar -xvf refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
+tar -xvf refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz
+
 wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-atac-1.0.0.tar.gz
 wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
 
@@ -23,11 +26,15 @@ wget https://cf.10xgenomics.com/supp/cell-arc/cellranger-arc-tiny-bcl-gex-simple
 
 tar -xvf cellranger-arc-tiny-bcl-gex-1.0.0.tar.gz
 
+rm refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz cellranger-arc-tiny-bcl-atac-1.0.0.tar.gz cellranger-arc-tiny-bcl-gex-1.0.0.tar.gz
+
 ```
 
 **STEP 3: Load cellranger-arc module with following command:**
 ```
 module load cellranger-arc/2.0.0
+module load bcl2fastq2
+
 ```
 
 **STEP4: Run mkfastq with following command if required, refer [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/mkfastq) to create csv file:**
@@ -35,7 +42,8 @@ module load cellranger-arc/2.0.0
 cellranger-arc mkfastq --id=tiny-bcl-atac \
                      --run=/path/to/cellranger-arc-tiny-bcl-atac-1.0.0 \
                      --csv=/path/to/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
-                     
+e.g.
+cellranger-arc mkfastq --id=tiny-bcl-atac --run=cellranger-arc-tiny-bcl-atac-1.0.0/ --csv=cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv --output-dir=results/
 ```
 
 **STEP5: Create a libraries CSV file as shown [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/count):**
