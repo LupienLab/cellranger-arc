@@ -1,5 +1,6 @@
 # cellranger-arc
 Reference: https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/what-is-cell-ranger-arc
+           https://hpc.nih.gov/apps/cellranger-arc.html
 
 **STEP 1: Login to cluster:**
 ```
@@ -72,3 +73,4 @@ cellranger-arc count --id=sample345 \
 e.g.
 cellranger-arc count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --libraries=libraries.csv --localcores=16   --localmem=64
 ```
+### note: example data currently fails at this step. waiting for reply from 10x support
