@@ -44,8 +44,8 @@ cellranger-arc mkfastq --id=tiny-bcl-atac \
                      --run=/path/to/cellranger-arc-tiny-bcl-atac-1.0.0 \
                      --csv=/path/to/cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv
 e.g.
-cellranger-arc mkfastq --id=tiny-bcl-atac --run=cellranger-arc-tiny-bcl-atac-1.0.0/ --csv=cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv --output-dir=results/
-cellranger-arc mkfastq --id=tiny-bcl-gex --run=cellranger-arc-tiny-bcl-gex-1.0.0/ --csv=cellranger-arc-tiny-bcl-gex-simple-1.0.0.csv --output-dir=results/
+cellranger-arc mkfastq --id=tiny-bcl-atac --run=cellranger-arc-tiny-bcl-atac-1.0.0/ --csv=cellranger-arc-tiny-bcl-atac-simple-1.0.0.csv --output-dir=results/ --localcores=$SLURM_CPUS_PER_TASK   --localmem=30
+cellranger-arc mkfastq --id=tiny-bcl-gex --run=cellranger-arc-tiny-bcl-gex-1.0.0/ --csv=cellranger-arc-tiny-bcl-gex-simple-1.0.0.csv --output-dir=results/ --localcores=$SLURM_CPUS_PER_TASK   --localmem=30
 ```
 
 **STEP5: Create a libraries CSV file as shown [here](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/count):**
@@ -59,8 +59,8 @@ fastqs,sample,library_type
 
 e.g.
 fastqs,sample,library_type
-/cluster/projects/lupiengroup/People/ankita/cellranger-arc-example/tiny-bcl-gex/outs/fastq_path/J5KBG,test_sample_atac,Gene Expression
-/cluster/projects/lupiengroup/People/ankita/cellranger-arc-example/tiny-bcl-atac/outs/fastq_path/J5KBG,test_sample_atac,Chromatin Accessibility
+tiny-bcl-gex/outs/fastq_path/,test_sample_gex,Gene Expression
+tiny-bcl-atac/outs/fastq_path/,test_sample_atac,Chromatin Accessibility
 ```
 
 **STEP6: Run count with following command:**
@@ -72,5 +72,7 @@ cellranger-arc count --id=sample345 \
                        --localmem=64
 e.g.
 cellranger-arc count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --libraries=libraries.csv --localcores=16   --localmem=64
+sbatch -p himem -J peaks --export=ALL -c 6 --mem 30G -t 1-0 --wrap "cellranger-arc count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --libraries=libraries.csv --localcores=$SLURM_CPUS_PER_TASK   --localmem=30"
 ```
-### note: example data currently fails at this step. waiting for reply from 10x support
+### note: example data currently fails at this step 6. waiting for reply from 10x support. 
+Error: FASTQ header mismatch detected at line 1245588 of input files for atac files.
