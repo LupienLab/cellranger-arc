@@ -72,6 +72,8 @@ cellranger-arc count --id=sample345 \
                        --localmem=64
 e.g.
 cellranger-arc count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --libraries=libraries.csv --localcores=16   --localmem=64
+
+
 sbatch -p himem -J peaks --export=ALL -c 6 --mem 30G -t 1-0 --wrap "cellranger-arc count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --libraries=libraries.csv --localcores=$SLURM_CPUS_PER_TASK   --localmem=30"
 ```
 ### note: example data currently fails at this step 6. waiting for reply from 10x support. 
