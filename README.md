@@ -33,7 +33,7 @@ wget https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-mm10-2020-A
 tar -xvf refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz
 
 
-## Example data and csv file
+## Example data for human and csv file
 
 wget https://s3-us-west-2.amazonaws.com/10x.files/samples/cell-arc/2.0.0/pbmc_granulocyte_sorted_3k/pbmc_granulocyte_sorted_3k_fastqs.tar
 
