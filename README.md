@@ -1,8 +1,12 @@
 # cellranger-arc
-Reference: 
+Reference:
+
 https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/what-is-cell-ranger-arc
+
 https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/using/count
+
 https://www.10xgenomics.com/resources/datasets/pbmc-from-a-healthy-donor-granulocytes-removed-through-cell-sorting-3-k-1-standard-2-0-0
+
 https://www.10xgenomics.com/resources/datasets?menu%5Bproducts.name%5D=Single%20Cell%20Multiome%20ATAC%20%2B%20Gene%20Expression&query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500
 
 https://hpc.nih.gov/apps/cellranger-arc.html
