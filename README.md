@@ -1,5 +1,5 @@
 # cellranger-arc
-Reference:
+References:
 
 https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/what-is-cell-ranger-arc
 
