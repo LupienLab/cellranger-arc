@@ -12,7 +12,7 @@ ssh username@cluster.org
 **STEP2: Download genome references and example data**
 ```
 wget https://cf.10xgenomics.com/supp/cell-atac/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
-wgethttps://cf.10xgenomics.com/samples/cell-atac/2.0.0/atac_pbmc_500_nextgem/atac_pbmc_500_nextgem_fastqs.tar
+wget https://cf.10xgenomics.com/samples/cell-atac/2.0.0/atac_pbmc_500_nextgem/atac_pbmc_500_nextgem_fastqs.tar
 
 tar -xvf refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
 tar -xvf atac_pbmc_500_nextgem_fastqs.tar
