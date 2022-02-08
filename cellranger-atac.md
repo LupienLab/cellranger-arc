@@ -12,10 +12,10 @@ ssh username@cluster.org
 **STEP2: Download genome references and example data**
 ```
 wget https://cf.10xgenomics.com/supp/cell-atac/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
-wget https://cf.10xgenomics.com/supp/cell-atac/cellranger-atac-tiny-bcl-1.0.0.tar.gz
+wgethttps://cf.10xgenomics.com/samples/cell-atac/2.0.0/atac_pbmc_500_nextgem/atac_pbmc_500_nextgem_fastqs.tar
 
 tar -xvf refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz
-tar -xvf cellranger-atac-tiny-bcl-1.0.0.tar.gz
+tar -xvf atac_pbmc_500_nextgem_fastqs.tar
 
 
 ```
@@ -50,7 +50,7 @@ cellranger-atac count --id=sample345 \
                         
 e.g.
 
-sbatch -p himem -J peaks --export=ALL -c 6 --mem 30G -t 1-0 --wrap "cellranger-atac count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --fastqs=/cluster/projects/lupiengroup/People/ankita/demo/scATAC/cellranger-atac-tiny-bcl-simple-1.0.0.csv --localcores=$SLURM_CPUS_PER_TASK   --localmem=30"
+sbatch -p himem -J peaks --export=ALL -c 6 --mem 30G -t 1-0 --wrap "cellranger-atac count --id=sample345 --reference=refdata-cellranger-arc-GRCh38-2020-A-2.0.0 --fastqs=atac_pbmc_500_nextgem_fastqs --sample=atac_pbmc_500_nextgem --localcores=$SLURM_CPUS_PER_TASK  --localmem=30"
 
 ```
 
