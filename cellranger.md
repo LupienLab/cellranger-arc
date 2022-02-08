@@ -36,6 +36,9 @@ cellranger mkfastq --id=tiny-bcl \
                      --csv=/path/to/ellranger-tiny-bcl-simple-1.2.0.csv
 e.g.
 cellranger mkfastq --id=tiny-bcl --run=cellranger-tiny-bcl-1.2.0 --csv=cellranger-tiny-bcl-simple-1.2.0.csv --localcores=$SLURM_CPUS_PER_TASK   --localmem=6
+
+sbatch -p himem -J scRNA --export=ALL -c 8 --mem 60G -t 1-0 --wrap "cellranger mkfastq --id=tiny-bcl --run=cellranger-tiny-bcl-1.2.0 --csv=cellranger-tiny-bcl-simple-1.2.0.csv --localcores=$SLURM_CPUS_PER_TASK   --localmem=6"
+
 ```
 
 **STEP5: Run count with following command:**
